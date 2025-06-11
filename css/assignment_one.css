@@ -1,6 +1,81 @@
-/*
-Implement your CSS code in this file. Do not change anything in any other file.
-Only this will be graded.
-*/
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+}
 
+#mainBody {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 50px;
+}
 
+#rightContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 160px);
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: 
+    "a b c"
+    "a d e"
+    "a f g";
+}
+
+.gridImage.zero.display_md {
+    grid-area: a;
+}
+
+.gridImage.one {
+    grid-area: b;
+}
+
+.gridImage.two {
+    grid-area: c;
+}
+
+.gridImage.three {
+    grid-area: d;
+}
+
+.gridImage.four {
+    grid-area: e;
+}
+
+.gridImage.five {
+    grid-area: f;
+}
+
+.gridImage.six {
+    grid-area: g;
+}
+
+@media (max-device-width: 1000px) {
+
+    body {
+        width: 60%;
+    }
+
+    #mainBody {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #rightContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (3, 160px);
+    }
+
+    .display_md {
+        display: none;
+    }
+}
+
+@media (max-device-width: 570px) {
+    
+    body {
+        width: 80%;
+    }
+
+}
